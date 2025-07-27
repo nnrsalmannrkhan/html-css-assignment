@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #000000;
+  height: 105px;
+}
+.wrapper {
+  max-width: 1413px; /* Figma theke width */
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-size: 32px;     /* Anumanik hight */
+  font-weight: 700;
+  color: #000000;
+  width: 200px;        /* Figma theke width */
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: default;
+}
+
+/* Main Menu Links */
+.main-links {
+  display: flex;
+  gap: 21px;           /* Figma theke gap */
+}
+
+.main-links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 27px;    /* Anumanik hight */
+  transition: color 0.3s ease;
+}
+
+/* Action group - Login, Get started, Globe Icon */
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Login button */
+.btn.gray {
+  background-color: #E5E5E5;
+  color: #000000;
+  padding: 11px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn.gray:hover {
+  background-color: #cccccc;
+}
+
+/* Get Started button */
+.btn.black {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 11px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn.black:hover {
+  background-color: #222222;
+}
+
+/* Globe icon */
+.globe-icon {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;    /* Desktop e dekha jabena */
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  /* hamburger button dekhanor jonno */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Main-links, action-group ke mobile theke hide */
+  .main-links,
+  .action-group {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 105px; /* navbar height */
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #000;
+    z-index: 1000;
+  }
+
+  /* active hole menu dekha jabe */
+  nav.active .main-links,
+  nav.active .action-group {
+    display: flex;
+  }
+
+  /* Links vertical & spacing */
+  .main-links a,
+  .action-group a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  /* action-group er jonno Align items center */
+  .action-group {
+    gap: 15px;
+  }
+}
+
+  /* start hero section */
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  background-image: url('images/hero-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 760px;     /* Figma layout theke info */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.hero-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.offer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.offer-form select,
+.offer-form input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 100px;
+  flex: 1;
+}
+
+.offer-form input {
+  flex: 2;
+}
+
+.btn-offer {
+  padding: 10px 20px;
+  background-color: #00d6b3;     /* Primary green background */
+  color: white;                 /* Text color er jonno */
+  border: none;
+  border-radius: 5px;             /* corner Rounded er jonno */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+}
+
+.btn-offer:hover {
+  background-color: #00b99b;     /* hover er jonno */
+}
+
+.input-button-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.input-button-group input {
+  flex: 1;
+  padding: 11px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.why-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  background: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.why-link:hover {
+  background: #ddd;
+}
+
+/* start buy sell favorate section 1 */
+
+.crypto-section {
+  background-color: #FFE14D;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.crypto-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.crypto-section h2 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.crypto-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.crypto-icons img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* end buy sell favorate section 1 */
+
+/* Start feature section */
+
+.features-section {
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  padding: 60px 40px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  padding: 0 20px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.feature-item a {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #000;
+}
+
+.das {
+  width: 70px;
+  height: 1px;
+  background-color: #000000;
+  align-self: center;
+}
+
+.see-full-btn {
+  margin-top: 40px;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #000000;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.see-full-btn:hover {
+  background-color: #f5f5f5;
+}
+/* end feature section */
+
+/* start buy sell section */
+
+ .buy-sell-section {
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.buy-sell-box {
+  display: flex;
+  margin: auto;
+  max-width: 1512px;
+  height: 400px;
+  background-color: #f8f8f8;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+.buy-column,
+.sell-column {
+  width: 756px;
+  height: 700px;
+  padding: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.offer-card {
+  border: 1px solid #000;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.view-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Vertical line in the middle */
+.vertical-line {
+  width: 1px;
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+}
+
+/* end buy sell section */
+
+/* start signup section */
+
+    .signup-section {
+      background-color: #CFBAFF;
+      border-bottom: 1px solid #000000;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .signup-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #000000;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+
+    .signup-section button {
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .signup-section button:hover {
+      opacity: 0.9;
+    }
+/* end signup section */
+
+/* start footer section */
+
+footer {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 110px 48px 48px;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      min-width: 160px;
+    }
+    .footer-column h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-column ul li {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .footer-column ul li em {
+      font-style: italic;
+    }
+    .footer-column ul li strong {
+      font-weight: 600;
+    }
+    .footer-logo {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .footer-bottom {
+      border-top: 1px solid #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.5;
+      padding-top: 24px;
+      margin-top: 64px;
+      text-align: center;
+    }
+/* end footer section */
